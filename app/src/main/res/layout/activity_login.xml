@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginAtivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/login_background_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:srcCompat="@drawable/fondo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_title_text"
+        style="@style/login_title"
+        android:layout_margin="@dimen/login_items_margin"
+        android:text="@string/login_input_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_background_img"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_input_login"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/login_items_margin"
+        android:hint="@string/login_input_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_title_text"
+        app:layout_constraintWidth_percent="0.8">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_input_login_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_input_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/login_items_margin"
+        android:hint="@string/login_input_password"
+        app:endIconDrawable="@android:drawable/ic_lock_lock"
+        app:endIconMode="custom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_input_login"
+        app:layout_constraintWidth_percent="0.8">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_input_password_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button_login"
+        style="@style/icon_button"
+        android:text="@string/login_button_login"
+        app:backgroundTint="@color/black"
+        app:icon="@android:drawable/ic_menu_send"
+        app:iconGravity="textEnd"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_input_password"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_forgot_text"
+        style="@style/login_subtext"
+        android:text="@string/login_forgot_text"
+        app:layout_constraintEnd_toStartOf="@+id/login_forgot_link"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button_login" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_forgot_link"
+        style="@style/login_link"
+        android:text="@string/login_getnew_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/login_forgot_text"
+        app:layout_constraintTop_toTopOf="@+id/login_forgot_text" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_account_text"
+        style="@style/login_subtext"
+        android:text="@string/login_account_text"
+        app:layout_constraintEnd_toStartOf="@+id/login_account_link"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_forgot_text" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_account_link"
+        style="@style/login_link"
+        android:text="@string/login_account_link"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/login_account_text"
+        app:layout_constraintTop_toTopOf="@+id/login_account_text" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/login_snackbar"
+        style="@style/login_snackbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

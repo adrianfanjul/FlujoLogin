@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">FlujoLogin</string>
+    <string name="register_text_name">¿Como te llamas?</string>
+    <string name="register_img_name_description">Imagen cara</string>
+    <string name="register_img_name_end_description">Icono ojo</string>
+    <string name="register_img_surname_description">Imagen cara</string>
+    <string name="register_img_surname_end_description">Icono ojo</string>
+    <string name="register_text_surname">¿Y tu apellido?</string>
+    <string name="register_dropdown_edad">¿Cuantos años tienes?</string>
+    <string name="age_1">0-5</string>
+    <string name="age_2">6-11</string>
+    <string name="age_3">12-17</string>
+    <string name="age_4">18-99</string>
+    <string name="register_btn_ok">Me apunto</string>
+    <string name="register_foot_text">Politica de privacidad</string>
+    <string name="register_text_error">Ups no creo que sea correcto, reísalo</string>
+    <string name="register_age_error">Esta app no es para ti</string>
+    <string name="register_img_text">Imagen chica con camara de fotos</string>
+    <string name="register_foot_link">Ver condiciones</string>
+
+    <string name="login_input_login">Login</string>
+    <string name="login_input_password">Password</string>
+    <string name="login_button_login">Login</string>
+    <string name="login_forgot_text">Forgot password</string>
+    <string name="login_getnew_text">Get new</string>
+    <string name="login_account_text">Do you have an account?</string>
+    <string name="login_account_link">Create new</string>
+    <string name="login_snackbar_text">These functionalities will be implemented soon</string>
+
+    <string name="main_title_text">Tu App de Viajes</string>
+    <string name="main_subtitle_text">Hola, estamos buscando a millones de usuarios con inquietudes y ganas de viajar.Si eres tu? No lo dudes accede a nuestra app y descubriras miles de destinos y facilidades para alquilar coches,ver el tiempo ...</string>
+    <string name="home_card_subtitle_text">USA, Los Angeles-2 Weeks</string>
+    <string name="home_card_title_text">City of Los Angeles</string>
+    <string name="home_card_subtitle_text2">Madives- 3 weeks</string>
+    <string name="home_card_title_text2">Bech vacation</string>
+    <string name="home_title">Upcoming meetups</string>
+    <string name="camera_icon_description">Icono camara</string>
+    <string name="heart_icon_description">Icono corazon</string>
+    <string name="face_icon_description">Icono cara</string>corazon
+    <string name="peak_icon_description">Icono pico</string>
+    <string name="login_validation_fail">El usuario o contraseña son incorrectos por favor intentelo de nuevo</string>
+</resources>

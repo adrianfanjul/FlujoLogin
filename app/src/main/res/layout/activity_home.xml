@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_title_text"
+        style="@style/h3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="@string/home_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/home_camara_btn"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/camera_icon_description"
+        app:backgroundTint="@color/home_btn_camara"
+        app:icon="@android:drawable/ic_menu_camera"
+        app:layout_constraintEnd_toStartOf="@+id/home_corazon_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/main_title_text"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintTop_toBottomOf="@+id/main_title_text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/home_corazon_btn"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/heart_icon_description"
+        app:backgroundTint="@color/home_btn_corazon"
+        app:icon="@android:drawable/ic_input_add"
+        app:layout_constraintEnd_toStartOf="@+id/home_pico_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_camara_btn"
+        app:layout_constraintTop_toTopOf="@+id/home_camara_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/home_pico_btn"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/peak_icon_description"
+        app:backgroundTint="@color/home_btn_picos"
+        app:icon="@android:drawable/ic_menu_gallery"
+        app:layout_constraintEnd_toStartOf="@+id/home_cara_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_corazon_btn"
+        app:layout_constraintTop_toTopOf="@+id/home_camara_btn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/home_cara_btn"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/face_icon_description"
+        app:backgroundTint="@color/home_btn_cara"
+        app:icon="@android:drawable/ic_menu_myplaces"
+        app:layout_constraintEnd_toEndOf="@+id/main_title_text"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_pico_btn"
+        app:layout_constraintTop_toTopOf="@+id/home_camara_btn" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview_card_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toTopOf="@+id/cardview_card_container2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_camara_btn"
+        app:layout_constraintWidth_percent="0.7">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardview_card_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cardview_card_img"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintHeight_percent="0.8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/image1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cardview_card_subTitle"
+                style="@style/card_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arbutus"
+                android:text="@string/home_card_subtitle_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardview_card_img" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cardview_card_title"
+                style="@style/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:ellipsize="start"
+                android:text="@string/home_card_title_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardview_card_subTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview_card_container2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview_card_container"
+        app:layout_constraintWidth_percent="0.7">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardview_card_root2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cardview_card_img2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintHeight_percent="0.8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/image2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cardview_card_subTitle2"
+                style="@style/card_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_card_subtitle_text2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardview_card_img2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cardview_card_title2"
+                style="@style/h2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:ellipsize="start"
+                android:text="@string/home_card_title_text2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardview_card_subTitle2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

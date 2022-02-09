@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listAges">
+        <item>@string/age_1</item>
+        <item>@string/age_2</item>
+        <item>@string/age_3</item>
+        <item>@string/age_4</item>
+    </string-array>
+
+</resources>
