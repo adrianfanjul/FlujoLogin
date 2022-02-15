@@ -1,6 +1,7 @@
 package com.tokioschool.flujologin;
 
-import static com.tokioschool.flujologin.constants.USER;
+import static com.tokioschool.flujologin.Constants.KEY_DATA;
+import static com.tokioschool.flujologin.Constants.USER;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -13,7 +14,6 @@ import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import com.tokioschool.flujologin.databinding.ActivityRegisterBinding;
@@ -98,9 +98,11 @@ public class RegisterActivity extends AppCompatActivity {
             User user =new User();
             user.setUsername(binding.registerTextName.getText().toString());
             user.setPassword(binding.registerTextSurname.getText().toString());
-            Intent loginIntent=new Intent(this,LoginAtivity.class);
-            loginIntent.putExtra(USER,user);
-            startActivity(loginIntent);
+            Intent data=new Intent();
+            data.putExtra(KEY_DATA,user);
+            setResult(RESULT_OK,data);
+            finish();
+
         });
     }
 

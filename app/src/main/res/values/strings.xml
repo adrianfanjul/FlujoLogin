@@ -39,4 +39,6 @@
     <string name="face_icon_description">Icono cara</string>corazon
     <string name="peak_icon_description">Icono pico</string>
     <string name="login_validation_fail">El usuario o contraseña son incorrectos por favor intentelo de nuevo</string>
+    <string name="home_user_error">Error al recibir el dato</string>
+    <string name="login_no_register">Ahun no te has registrado, pulsa create new para hacerlo</string>
 </resources>
